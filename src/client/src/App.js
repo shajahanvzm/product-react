@@ -1,11 +1,14 @@
 import './App.css';
-import './components/ProdosApp'
+import Learning from './learingcomponents/Learning'
+import Header from './components/Header'
+import Footer from './components/Footer';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome, hello there PRODOS</h1>
-      <h2>Product List</h2>
-      <p> this is product list</p>
+    <div className="">
+    <Header />
+     <Learning />
+     <Footer />
     </div>
   );
 }
