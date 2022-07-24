@@ -64,9 +64,6 @@ class MultuForm extends Component {
 
                     <input type="submit" value="Sumbit" />
                     <input type="reset" value="reset" onClick={this.reset} />
-
-
-
                 </form>
 
             </div>
