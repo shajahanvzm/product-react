@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import ListProduct from './ListProduct'
 
 class AddProduct extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            id: '',
-            name: 'Name',
-            type: 'Type',
-            description: 'Description'
+            product: {
+                id: '',
+                name: 'Name',
+                type: 'Type',
+                description: 'Description'
+            }
         }
     }
 
@@ -30,10 +33,12 @@ class AddProduct extends Component {
 
     reset = (event) => {
         this.setState({
-            id: '',
-            name: 'Name',
-            type: 'Type',
-            description: 'Description'
+            product: {
+                id: '',
+                name: 'Name',
+                type: 'Type',
+                description: 'Description'
+            }
         })
     }
 
@@ -46,19 +51,19 @@ class AddProduct extends Component {
                         <tbody>
                             <tr>
                                 <td> Id  </td>
-                                <td> <input type="text" name="id" placeholder={this.state.id} onChange={this.inputChange} /> </td>
+                                <td> <input type="text" name="id" placeholder={this.state.product.id} onChange={this.inputChange} /> </td>
                             </tr>
                             <tr>
                                 <td> Name  </td>
-                                <td> <input type="text" name="name" placeholder={this.state.name} onChange={this.inputChange} />  </td>
+                                <td> <input type="text" name="name" placeholder={this.state.product.name} onChange={this.inputChange} />  </td>
                             </tr>
                             <tr>
                                 <td> Type  </td>
-                                <td> <input type="text" name="type" placeholder={this.state.type} onChange={this.inputChange} /> </td>
+                                <td> <input type="text" name="type" placeholder={this.state.product.type} onChange={this.inputChange} /> </td>
                             </tr>
                             <tr>
                                 <td> Description  </td>
-                                <td> <textarea name="description" placeholder={this.state.description} onChange={this.inputChange}  rows="5"/>  </td>
+                                <td> <textarea name="description" placeholder={this.state.product.description} onChange={this.inputChange} rows="5" />  </td>
                             </tr>
                             <tr>
                                 <td><input type="submit" value="Sumit" /> </td>
@@ -66,8 +71,9 @@ class AddProduct extends Component {
                             </tr>
                         </tbody>
                     </table>
-
                 </form>
+                <hr />
+                <ListProduct />
             </div>
         );
     }
