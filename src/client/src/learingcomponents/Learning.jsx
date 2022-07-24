@@ -4,6 +4,7 @@ import StateEg from './StateEg'
 import ListEg from './ListEg'
 import TableEg from './TableEg'
 import FormEg from './FormEg';
+import MultuForm from './MultuForm';
 class Learning extends Component {
     render() {
         return (
@@ -11,9 +12,10 @@ class Learning extends Component {
                 {/* <ProdosApp greeting="Hello thorugh properties in components" name="sha" />
                 <StateEg />
                 <ListEg />
-                <TableEg /> */}
+                <TableEg /> 
 
-                <FormEg />
+                <FormEg />*/}
+                <MultuForm />
             </div>
         );
     }
